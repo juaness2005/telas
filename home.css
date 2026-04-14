@@ -1,0 +1,188 @@
+:root{
+    --fundo-botao: #652A0E;
+    --fonte-botao: #fff;
+    --fonte: #F0ECE1;   
+    --fundo-botao-hover:#3d1706;
+}
+
+.dark{
+    --fundo-botao: #F0ECE1;
+    --fonte-botao: #3D1807;
+    --fonte: #fff;
+    --fundo-botao-hover: #d6caa8;
+    --btn-toggle-bg: #3a231a;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Inter';
+    color: var(--fonte);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.315), rgba(0,0,0,0.5)), url('assets/fundo.jpg');
+    background-size: cover;     
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+ 
+/* checkbox do Botão */
+ 
+.checkbox {
+    opacity: 0; /* checkbox real está escondido */
+    position: absolute;
+}
+ 
+/* Corpo do Botão */
+ 
+.label {
+    background-color: #e3d4ba;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+    height: 16px;
+    width: 40px;
+    transform: scale(1.5);
+    margin-top: 22px;
+    margin-right: 22px;
+ 
+}
+ 
+.dark .label {
+    background-color: var(--btn-toggle-bg);
+}
+ 
+.dark .label .indicador{
+    background-color: #F0ECE1;
+}
+ 
+ 
+/* Indicador do Botão */
+ 
+.label .indicador {
+    background-color: #3a231a;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;  
+    transition: transform 0.2s linear; /* transição do deslizamento do indicador */
+}
+ 
+ 
+/* Transição do Indicador (Bolinha Branca) */
+/* O sinal de "+" seleciona o elemento que vem LOGO APÓS o input (.label). */
+ 
+#botao-tema:checked + .label .indicador {
+    transform: translateX(24px); /* o indicador desliza 24px para a direita */
+}
+ 
+/* Imagens do Botão  */
+ 
+.img-lua, .img-sol{
+    width: 16px;
+    height: 16px;
+}
+ 
+
+.btnLogin{
+    background-color:var(--fundo-botao);
+    color: var(--fonte-botao);
+    border: none;
+    padding: 10px 30px;;
+    margin: 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.botaos {
+    margin-top: 40px;
+    
+}
+
+.botaos a{
+    text-decoration: none;
+    
+}
+
+.btnLogin:hover{
+    background-color: var(--fundo-botao-hover);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.titulo h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    font-size: 65px;
+}
+
+.titulo p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    font-size: 25PX;
+}
+
+.divisor{
+    background-color: var(--fonte);
+    height: 0.5px;
+    margin-left: 140px;
+    margin-right: 140px;
+    margin-bottom: 60px;
+}
+
+.btnCadastro{
+    background-color: var(--fundo-botao);
+    color: var(--fonte-botao);
+    border: none;
+    padding: 18px 48px;;
+    margin: 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btnCadastro:hover{
+    background-color: var(--fundo-botao-hover);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.btns a{
+    text-decoration: none;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+.titulo-segun{
+    display: flex;
+    justify-content: center;
+    color: var(--fonte);
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.texto{
+    display: flex;
+    justify-content: center;
+}
